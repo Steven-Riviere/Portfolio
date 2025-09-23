@@ -20,6 +20,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapGet("/", context => {
+    context.Response.Redirect("/Home/Index");
+    return Task.CompletedTask;
+});
+
+
 app.MapRazorPages();
 
 app.Run();
