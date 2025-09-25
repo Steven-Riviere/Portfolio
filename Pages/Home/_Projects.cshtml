@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Projets";
+}
+
+<section class="recentProjects">
+    <div class="sectionContent recentProjectsContent">
+        <div class="articleProjects" aria-label="Projets récents">
+            <div>
+                <h2>Projets récents</h2>
+                <p>Trouvez ci-dessous quelques-uns de mes projets qui mettent en pratique mes compétences.</p>
+            </div>
+            <div class="listRecentProjects">
+                <article class="cardProject clickable">
+                    <div class="cardImageWrapper">
+                        <img src="~/images/pretimmosimulator.png" alt="Capture d'écran du projet PretImmo Simulator'" class="cardImage" />
+                        <div class="cardIcons">
+                            <a href="https://github.com/Steven-Riviere/AmortizationCalculator" target="_blank" rel="noopener noreferrer">
+                                <img src="~/images/github-black.svg" alt="javascript" class="icon" />
+                            </a>
+                            <a href="https://pretimmosimulator.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
+                                <img src="~/images/arrow.svg" alt="javascript" class="icon" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cardProjectDescription">
+                        <h3>Prêt Immo Simulator</h3>
+                        <p>Application permettant de simuler un prêt avec assurance ou non. Possibilité de télécharger le résultat en PDF</p>
+                        <ul class="tags" aria-label="technologies utilisées">
+                            <li class="tag">QuestPDF</li>
+                            <li class="tag">ASP.NET Core MVC (Razor)</li>
+                            <li class="tag">C#</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
