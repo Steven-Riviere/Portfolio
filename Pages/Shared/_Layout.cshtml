@@ -15,12 +15,16 @@
         <nav class="navbar navbar-expand-sm navbar-dark mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Steven Rivière</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" aria-label="menu">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+                    </div>
+                    <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item me-4">
                             <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("/Home/Index") ? "active" : "")" asp-page="/Home/Index" aria-label="accueil">Accueil</a>
