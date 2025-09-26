@@ -23,10 +23,10 @@
                 <div class="collapse navbar-collapse" aria-label="menu">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item me-4">
-                            <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("Index") ? "active" : "")" asp-page="/Index" aria-label="accueil">Accueil</a>
+                            <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("/Home/Index") ? "active" : "")" asp-page="/Home/Index" aria-label="accueil">Accueil</a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("About") ? "active" : "")" asp-page="/About" aria-label="a propos">&Agrave; propos</a>
+                            <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("/About/Index") ? "active" : "")" asp-page="/About/Index" aria-label="a propos">&Agrave; propos</a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("Projects") ? "active" : "")" asp-page="/Projects" aria-label="projets">Projets</a>
