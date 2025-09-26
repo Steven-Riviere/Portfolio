@@ -381,6 +381,7 @@ section.technoSection::after {
     filter: brightness(0.7);
     transform: scale(1);
     transition: filter 0.3s, transform 0.3s;
+    height: 100%;
 }
 
 .cardProject:hover .cardImage {
@@ -413,6 +414,16 @@ section.technoSection::after {
     flex-direction: column;
     gap: 1rem;
     margin: 1rem;
+}
+
+.cardProject p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: start;
+    margin-bottom: .5rem;
 }
 
 .cardProject .tags {
