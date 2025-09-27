@@ -24,21 +24,22 @@
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
                     </div>
                     <div class="offcanvas-body">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item me-4">
-                            <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("/Home/Index") ? "active" : "")" asp-page="/Home/Index" aria-label="accueil">Accueil</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("/About/Index") ? "active" : "")" asp-page="/About/Index" aria-label="a propos">&Agrave; propos</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("Projects") ? "active" : "")" asp-page="/Projects" aria-label="projets">Projets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("Contacts") ? "active" : "")" asp-page="/Contacts" aria-label="contacts">Contacts</a>
-                        </li>
-                    </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item me-4">
+                                <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("/Home/Index") ? "active" : "")" asp-page="/Home/Index" aria-label="accueil">Accueil</a>
+                            </li>
+                            <li class="nav-item me-4">
+                                <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("/About/Index") ? "active" : "")" asp-page="/About/Index" aria-label="a propos">&Agrave; propos</a>
+                            </li>
+                            <li class="nav-item me-4">
+                                <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("Projects") ? "active" : "")" asp-page="/Projects" aria-label="projets">Projets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("Contacts") ? "active" : "")" asp-page="/Contacts" aria-label="contacts">Contacts</a>
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
         </nav>

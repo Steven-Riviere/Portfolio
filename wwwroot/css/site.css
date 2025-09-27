@@ -1,3 +1,6 @@
+/* =============================================== */
+/*                       Communs                   */
+/* =============================================== */
 :root {
     --bg-dark: rgb(31 29 29);
     --bg-card: #1f1d1d;
@@ -98,34 +101,6 @@ section {
     width: 100%;
     padding: 3rem 0;
 }
-
-.sectionContent {
-    width: 100%;
-    margin: 0 1rem;
-}
-
-.presentationContent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 3rem;
-}
-
-/* ============================= */
-/*          Présentation         */
-/* ============================= */
-
-.presentation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 20px;
-    padding: 0.5rem;
-    gap: 1rem;
-}
-.presentation button {
-    flex: 1 1 auto;
-}
-
 h1 {
     font-size: 2.5rem;
     font-weight: 600;
@@ -138,13 +113,6 @@ h2, h3, h4 {
 p {
     margin: 0;
     font-size: large;
-}
-
-.action {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
 }
 
 button {
@@ -193,6 +161,69 @@ button:hover {
     gap: 1.5rem;
     padding: 0;
     margin: 0;
+}
+
+/* ============================= */
+/*          Footer               */
+/* ============================= */
+
+.footerGlobal {
+    box-shadow: 0px -6px 20px 7px rgba(0, 0, 0, 0.5);
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.footerGlobal nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+footer a, footer a i {
+    color: var(--text-muted);
+}
+
+footer a:hover, footer a:hover i {
+    color: white;
+}
+
+/* =============================================== */
+/*                       HOME                      */
+/* =============================================== */
+.sectionContent {
+    width: 100%;
+    margin: 0 1rem;
+}
+
+.presentationContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+}
+
+/* ============================= */
+/*          Présentation         */
+/* ============================= */
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+.presentation button {
+    flex: 1 1 auto;
+}
+
+.action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 /* ============================= */
@@ -467,34 +498,110 @@ section.technoSection::after {
     gap: .5rem;
 }
 
-
-/* ============================= */
-/*          Footer               */
-/* ============================= */
-
-.footerGlobal {
-    box-shadow: 0px -6px 20px 7px rgba(0, 0, 0, 0.5);
-    height: 100px;
-    display: flex;
-    align-items: center;
+/* =============================================== */
+/*                       ABOUT                     */
+/* =============================================== */
+.headTitle {
+    padding-bottom: 0;
 }
 
-.footerGlobal nav.container {
+.myProfileContent, .retrainingContent {
+    width: calc(100% - 2rem);
+}
+
+.articleMyProfile {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.articleMyProfile .imageWrapper {
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.articleMyProfile .imageWrapper img {
     width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 100%;
+    filter: brightness(.8);
+    border: 8px solid var(--primary);
+    box-shadow: 1px 6px 20px 7px rgba(0, 0, 0, 0.5);
 }
 
-footer a, footer a i {
-    color: var(--text-muted);
+.myArticleProfileContent {
+    width: 70%;
+    box-shadow: 0 14px 28px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.22);
+    padding: 2rem;
+    border-radius: 20px;
 }
 
-footer a:hover, footer a:hover i {
-    color: white;
+.myArticleProfileContent h2 {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 
+.articleRetraining {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
 
+.articleRetraining .course {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.articleRetraining .course .courseContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+}
+
+.articleRetraining .course .courseContent h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.articleRetraining .course .courseContent h3 .iconRetrainingTitle img {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 100px;
+    padding: 5px;
+}
+
+.articleRetraining .course .courseContent .courseUl {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: .8rem;
+    padding-left: 0;
+}
+
+.articleRetraining .course .courseContent .courseUl li {
+    display: flex;
+    gap: .5rem;
+}
+
+.iconRetraining img {
+    filter: invert(1);
+}
+
+/* =============================================== */
+/*                   RESPONSIVES                   */
+/* =============================================== */
 @media (min-width: 768px) {
     html {
     font-size: 16px;
