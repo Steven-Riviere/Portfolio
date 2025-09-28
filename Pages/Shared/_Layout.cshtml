@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Portfolio.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
 </head>
 <body>
     <header>
+        @{
+            var currentPage = ViewContext.RouteData.Values["page"]?.ToString();
+        }
         <nav class="navbar navbar-expand-sm navbar-dark mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Steven Rivière</a>
@@ -26,16 +28,16 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item me-4">
-                                <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("/Home/Index") ? "active" : "")" asp-page="/Home/Index" aria-label="accueil">Accueil</a>
+                                <a class="nav-link @(currentPage == "/Home/Index" ? "active" : "")" asp-page="/Home/Index" aria-label="accueil">Accueil</a>
                             </li>
                             <li class="nav-item me-4">
-                                <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("/About/Index") ? "active" : "")" asp-page="/About/Index" aria-label="a propos">&Agrave; propos</a>
+                                <a class="nav-link @(currentPage == "/About/Index" ? "active" : "")" asp-page="/About/Index" aria-label="a propos">À propos</a>
                             </li>
                             <li class="nav-item me-4">
-                                <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("Projects") ? "active" : "")" asp-page="/Projects" aria-label="projets">Projets</a>
+                                <a class="nav-link @(currentPage == "/Projects/Index" ? "active" : "")" asp-page="/Projects/Index" aria-label="projets">Projets</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link @(ViewContext.ActionDescriptor.DisplayName.Contains("Contacts") ? "active" : "")" asp-page="/Contacts" aria-label="contacts">Contacts</a>
+                                <a class="nav-link @(currentPage == "/Contacts/Index" ? "active" : "")" asp-page="/Contacts/Index" aria-label="contacts">Contacts</a>
                             </li>
                         </ul>
 

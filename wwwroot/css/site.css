@@ -143,6 +143,11 @@ button:hover {
     transform: scale(1.03);
 }
 
+.sectionContent {
+    width: 100%;
+    margin: 0 1rem;
+}
+
 section.technoSection::before, section.technoSection::after,
 article.articleRetraining::before, article.articleRetraining::after,
 section.myDiplomas::before, section.myDiplomas::after {
@@ -212,10 +217,6 @@ footer a:hover, footer a:hover i {
 /* =============================================== */
 /*                       HOME                      */
 /* =============================================== */
-.sectionContent {
-    width: 100%;
-    margin: 0 1rem;
-}
 
 .presentationContent {
     display: grid;
@@ -409,12 +410,11 @@ section.technoSection {
 }
 
 .cardProject {
-    box-shadow: 1px 6px 20px 7px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-lg);
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    position: relative;
-    border-radius: 20px;
+    border-radius: var(--btn-radius);
     padding: 0.5rem;
     border: 2px solid var(--primary);
     gap: 0.5rem;
@@ -475,11 +475,6 @@ section.technoSection {
 }
 
 .cardProject p {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
     text-align: start;
     margin-bottom: .5rem;
 }
@@ -712,6 +707,53 @@ section.technoSection {
     margin-top: 2rem;
     flex-wrap: wrap;
 }
+
+/* =============================================== */
+/*                   PROJECTS                      */
+/* =============================================== */
+
+.articleAllProjects {
+    text-align: center;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.listAllProjects {
+    display: flex;
+    flex-direction: column;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+}
+
+.cardProjectHorizontal {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cardProjectHorizontal .imageWrapper {
+    position: relative;
+    flex: 1;
+    max-width: 50%;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.cardProjectHorizontal .imageWrapper img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.cardProjectHorizontal .cardProjectDescription {
+    flex: 1;
+    margin: 20px 25px;
+    text-align: left;
+}
+
 
 /* =============================================== */
 /*                   RESPONSIVES                   */

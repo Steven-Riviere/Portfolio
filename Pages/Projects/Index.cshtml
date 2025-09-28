@@ -1,0 +1,9 @@
+﻿@page
+@model Portfolio.Pages.Projects.IndexModel
+@{
+    ViewData["Title"] = "Project";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_Projects")
+@await Html.PartialAsync("_Contacts")

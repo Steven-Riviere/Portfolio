@@ -1,18 +1,19 @@
 ﻿@{
-    ViewData["Title"] = "Projets";
+    ViewData["Title"] = "Intro";
 }
 
-<section class="recentProjects">
-    <div class="sectionContent recentProjectsContent">
-        <div class="articleProjects" aria-label="Projets récents">
-            <div>
-                <h2>Projets récents</h2>
-                <p>Trouvez ci-dessous quelques-uns de mes projets qui mettent en pratique mes compétences.</p>
-            </div>
-            <div class="listRecentProjects">
-                <article class="cardProject clickable">
-                    <div class="cardImageWrapper">
-                        <img src="~/images/pretimmosimulator.png" alt="Capture d'écran du projet PretImmo Simulator'" class="cardImage" />
+<section class="headTitle">
+    <h1>Mes projets</h1>
+    <p>Découvrez une sélection de mes projets, alliant des besoins réels et ergonomie.</p>
+</section>
+
+<section>
+    <div class="sectionContent">
+        <div class="articleAllProjects" aria-label="voir l'ensemble des projets">
+            <div class="listAllProjects">
+                <article class="cardProject cardProjectHorizontal">
+                    <div class="imageWrapper">
+                        <img src="~/images/pretimmosimulator.png" alt="Capture d'écran du projet PretImmo Simulator" class="cardImage" />
                         <div class="cardIcons">
                             <a href="https://github.com/Steven-Riviere/AmortizationCalculator" target="_blank" rel="noopener noreferrer">
                                 <img src="~/images/github-black.svg" alt="amortization-github" class="icon" />
@@ -23,7 +24,7 @@
                         </div>
                     </div>
                     <div class="cardProjectDescription">
-                        <h3>Prêt Immo Simulator</h3>
+                        <h3>Prêt Immobilier</h3>
                         <p>
                             Le projet "Prêt Immo Simulator" permet de simuler un prêt immobilier avec ou sans assurance.
                             L’utilisateur renseigne les paramètres du prêt : date de début, différé, taux, durée, etc.
@@ -40,8 +41,8 @@
                     </div>
                 </article>
 
-                <article class="cardProject clickable">
-                    <div class="cardImageWrapper">
+                <article class="cardProject cardProjectHorizontal">
+                    <div class="imageWrapper">
                         <img src="~/images/ecomod.png" alt="Capture d'écran d'un mod de coopération du jeu Eco sur les boites aux lettres" class="cardImage" />
                         <div class="cardIcons">
                             <a href="https://github.com/Steven-Riviere/Eco-Mod" target="_blank" rel="noopener noreferrer">
@@ -71,15 +72,12 @@
                     </div>
                 </article>
 
-                <article class="cardProject clickable">
-                    <div class="cardImageWrapper">
-                        <img src="~/images/suivi-depenses-graphique.png" alt="Capture d'écran d'un mod de coopération du jeu Eco sur les boites aux lettres" class="cardImage" />
+                <article class="cardProject cardProjectHorizontal">
+                    <div class="imageWrapper">
+                        <img src="~/images/suivi-depenses-graphique.png" alt="Capture d'écran du projet de suivi des dépenses" class="cardImage" />
                         <div class="cardIcons">
                             <a href="https://github.com/Steven-Riviere/Suivi-Depenses/tree/main" target="_blank" rel="noopener noreferrer">
                                 <img src="~/images/github-black.svg" alt="depenses" class="icon" />
-                            </a>
-                            <a href="" rel="noopener noreferrer">
-                                <img src="~/images/arrow.svg" alt="modio" class="icon" />
                             </a>
                         </div>
                     </div>
@@ -98,12 +96,56 @@
                         </ul>
                     </div>
                 </article>
-            </div>
 
-            <button type="button" aria-label="Voir tous mes projets">
-                Voir tous mes projets
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
+                <article class="cardProject cardProjectHorizontal">
+                    <div class="imageWrapper">
+                        <img src="~/images/conversion-unites.jpg" alt="Capture d'écran du projet de conversion d'unités" class="cardImage" />
+                        <div class="cardIcons">
+                            <a href="https://github.com/Steven-Riviere/UnitConverter" target="_blank" rel="noopener noreferrer">
+                                <img src="~/images/github-black.svg" alt="depenses" class="icon" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cardProjectDescription">
+                        <h3>Convertisseur d'unités</h3>
+                        <p>
+                            Ce projet "Convertisseur d'unités" permet de convertir toutes sortes d'unités,
+                            qu'il s'agisse de cuillères à café en litres ou de miles en kilomètres.
+                            Un historique des conversions est conservé pour l'utilisateur, avec la possibilité de supprimer chaque entrée individuellement.
+                            Pratique notamment lors de la réalisation de recettes de cuisine.
+                        </p>
+
+                        <ul class="tags" aria-label="technologies utilisées">
+                            <li class="tag">Java</li>
+                            <li class="tag">Swing</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cardProject cardProjectHorizontal">
+                    <div class="imageWrapper">
+                        <img src="~/images/ManageMenus.jpg" alt="Capture d'écran du projet de la gestion d'un restaurant" class="cardImage" />
+                        <div class="cardIcons">
+                            <a href="https://github.com/Steven-Riviere/RestaurantManagementSystem" target="_blank" rel="noopener noreferrer">
+                                <img src="~/images/github-black.svg" alt="depenses" class="icon" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cardProjectDescription">
+                        <h3>Gestion du Restaurant</h3>
+                        <p>
+                            Le projet "Gestion du Restaurant" permet de gérer l’ouverture et la fermeture d’un restaurant ainsi que l’organisation de ses menus.
+                            Il offre la possibilité d’ajouter et modifier les tables, de créer différents menus avec leurs noms et prix respectifs,
+                            et d’assurer un suivi structuré des éléments constituant le restaurant.
+                        </p>
+
+                        <ul class="tags" aria-label="technologies utilisées">
+                            <li class="tag">Java</li>
+                            <li class="tag">Swing</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </div>
     </div>
 </section>
