@@ -754,6 +754,14 @@ section.technoSection {
     text-align: left;
 }
 
+.articleInterestedInMyProfile {
+    text-align: center;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
 
 /* =============================================== */
 /*                   RESPONSIVES                   */
