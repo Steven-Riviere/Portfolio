@@ -64,6 +64,40 @@
                 </a>
             </div>
         </article>
-        <article></article>
+        <article class="articleSendMeEmail">
+            <h2>
+                <i class="fa-solid fa-paper-plane"></i>
+                Envoyez-moi un message
+            </h2>
+            <form id="contactForm" novalidate>
+                <div>
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom complet" />
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Votre email" />
+                </div>
+
+                <div>
+                    <label for="subject">Objet</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Objet du message" />
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Envoyer
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+
+                <p id="statusMessage"></p>
+            </form>
+        </article>
     </div>
 </section>
