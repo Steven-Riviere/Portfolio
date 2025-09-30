@@ -16,9 +16,9 @@
         @{
             var currentPage = ViewContext.RouteData.Values["page"]?.ToString();
         }
-        <nav class="navbar navbar-expand-sm navbar-dark mb-3">
+        <nav class="navbar navbar-expand-lg navbar-dark mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Steven Rivière</a>
+                <a asp-page="/Home/Index" aria-label="accueil">Steven Rivière</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -42,7 +42,6 @@
                                 <a class="nav-link @(currentPage == "/Contact/Index" ? "active" : "")" asp-page="/Contact/Index" aria-label="contacts">Contacts</a>
                             </li>
                         </ul>
-
                     </div>
                 </div>
             </div>
@@ -56,7 +55,7 @@
     </div>
     <footer class="footerGlobal py-3">
         <nav class="container d-flex justify-content-between align-items-center">
-            <p>&copy; 2025 - Portfolio</p>
+            <p>&copy; 2025 - Steven Rivière</p>
             <nav class="iconsFooter" aria-label="Liens vers RS et contacts">
                 <ul class="mediaList">
                     <li>

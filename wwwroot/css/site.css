@@ -35,6 +35,9 @@ a {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+a:hover {
+    color: var(--text-light);
+}
 
 /* ============================= */
 /*          Navbar               */
@@ -64,9 +67,13 @@ a {
     color: var(--text-light);
 }
 
+.nav-link.active {
+    background-color: var(--primary);
+}
+
 .navbar-nav .nav-item a:hover,
 .navbar-nav .nav-link.active {
-    background-color: var(--primary);
+    color: var(--primary);
 }
 
 .navbar-toggler {
@@ -115,7 +122,7 @@ p {
     font-size: large;
 }
 
-button, .whyMe a {
+button {
     all: unset;
     display: inline-flex;
     align-items: center;
@@ -131,7 +138,7 @@ button, .whyMe a {
     cursor: pointer;
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
-.contactBtn:hover, .whyMe a:hover {
+.contactBtn:hover{
     background: white;
     color: black;
 }
@@ -865,7 +872,7 @@ section.technoSection {
 /* =============================================== */
 /*                   RESPONSIVES                   */
 /* =============================================== */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     html {
     font-size: 16px;
     }
@@ -873,9 +880,17 @@ section.technoSection {
     .technoContent, .recentProjectsContent {
         width: calc(100% - 2rem);
     }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .offcanvas {
         background-color: var(--bg-dark);
         color: var(--text-light);
@@ -885,12 +900,13 @@ section.technoSection {
         font-size: 1.1rem;
         font-weight: 600;
         color: var(--text-light);
+        display: block;
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
     }
 
     .offcanvas .nav-link.active {
-        color : var(--text-light);
-        background-color: var(--primary);
-        border-radius: 6px;
+        color: var(--text-light);
     }
 
     .offcanvas .btn-close {
@@ -908,7 +924,33 @@ section.technoSection {
         width: 270px;
         border-left: 1px solid rgba(0,0,0,.2);
         transform: translateX(100%);
-        height: 260px;
+        height: 100%;
+    }
+
+    .navbar-collapse {
+        display: none !important;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .listAllProjects {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .cardProjectHorizontal {
+        flex-direction: column;
+    }
+
+    .cardProjectHorizontal .imageWrapper,
+    .cardProjectHorizontal .cardProjectDescription {
+        max-width: 100%;
+    }
+
+    .cardProjectHorizontal .cardProjectDescription {
+        text-align: center;
     }
 
     .contactContent {
@@ -922,6 +964,15 @@ section.technoSection {
         text-align: left;
     }
 
+    .question.right, .question.left {
+        align-self: center !important;
+        text-align: center !important;
+        max-width: 90%;
+    }
+
+    .contactHead p {
+        margin: 0 25px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -946,6 +997,9 @@ section.technoSection {
     .cardMe img {
         width: 100%;
         height: 100%;
+    }
+    .articleContactMe {
+        align-items: center;
     }
 }
 
@@ -1043,24 +1097,6 @@ section.technoSection {
     .articleInterestedInMyProfile {
         padding: 0.5rem 1rem;
         gap: 2rem;
-    }
-
-    .listAllProjects {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .cardProjectHorizontal {
-        flex-direction: column;
-    }
-
-    .cardProjectHorizontal .imageWrapper,
-    .cardProjectHorizontal .cardProjectDescription {
-        max-width: 100%;
-    }
-
-    .cardProjectHorizontal .cardProjectDescription {
-        text-align: center;
     }
 
     .articleContactMe,
