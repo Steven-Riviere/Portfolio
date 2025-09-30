@@ -785,7 +785,6 @@ section.technoSection {
     flex-direction: column;
     gap: 1rem;
     margin-left: 1.5rem;
-    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -793,72 +792,74 @@ section.technoSection {
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.articleContactMe ul li .icon {
+.articleContactMe ul li:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.articleContactMe ul li .iconLiContact {
     width: 40px;
     height: 40px;
-    filter: brightness(0) invert(1);
-    transition: all .3s ease-in-out;
-}
-
-.articleContactMe ul li :hover {
-    transform: scale(1.05);
-}
-
-.whyMe {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
 }
 
-.whyMe a {
-    margin-top: 1rem;
-    align-self: center;
-}
-
-.whyMe a:hover {
-    transform: scale(1.05);
-}
-
-.articleSendMeEmail {
+.articleContactMe ul li a {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.2rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.articleQuestions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
 }
 
-.articleSendMeEmail form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 1rem 1rem 0;
-}
-
-.articleSendMeEmail form label {
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
-}
-
-.articleSendMeEmail form input, .articleSendMeEmail form textarea {
+.articleQuestions .question {
+    max-width: 80%;
     font-size: 1.2rem;
-    padding: .7rem;
-    border-radius: .5rem;
-    background-color : var(--text-light);
-    border: 2px solid rgba(0,0,0,0);
-    width: 100%;
 }
 
-#contactForm button:hover {
-    background: white;
-    color: black;
+.articleQuestions .question.left {
+    align-self: flex-start;
+    text-align: left;
 }
 
-#contactForm button {
-    transform: scale(1.03);
+.articleQuestions .question.right {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.centerCV {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.centerCV a {
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.centerCV a:hover {
+    transform: scale(1.05);
 }
 
 /* =============================================== */
@@ -900,6 +901,27 @@ section.technoSection {
     .offcanvas .btn-close:hover {
         opacity: 0.7;
     }
+
+    .offcanvas-end {
+        top: 0;
+        right: 0;
+        width: 270px;
+        border-left: 1px solid rgba(0,0,0,.2);
+        transform: translateX(100%);
+        height: 260px;
+    }
+
+    .contactContent {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .articleQuestions .question.left,
+    .articleQuestions .question.right {
+        align-self: flex-start;
+        text-align: left;
+    }
+
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -929,7 +951,7 @@ section.technoSection {
 
 @media (max-width: 425px) {
     html {
-        font-size: 16px;
+        font-size: 14px;
     }
     .presentationContent {
         display: flex;
@@ -962,6 +984,97 @@ section.technoSection {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+    }
+
+    .headTitle p {
+        margin: 0 25px;
+    }
+
+    .articleMyProfile {
+        flex-direction: column;
+    }
+
+    .articleMyProfile .imageWrapper {
+        width: 70%;
+    }
+
+    .myArticleProfileContent {
+        width: 85%;
+        padding: 1rem;
+    }
+    .articleRetraining{
+        margin: 0 15px;
+    }
+
+    .articleRetraining h2 {
+        text-align: center;
+    }
+
+    .articleRetraining .course {
+        grid-template-columns: 1fr;
+    }
+
+    .courseContent {
+        padding: 1.5rem;
+    }
+
+    .transferableSkillsUl {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .articleMyTechnicalSkills .technicalSkills {
+        flex-direction: column;
+    }
+
+    .technicalSkills .technicalSkillsContent {
+        margin: 15px 0;
+    }
+
+    .readyToCollaborateAction {
+        flex-direction: column;
+    }
+
+    .readyToCollaborateAction button {
+        width: auto !important;
+    }
+
+    .articleAllProjects,
+    .articleInterestedInMyProfile {
+        padding: 0.5rem 1rem;
+        gap: 2rem;
+    }
+
+    .listAllProjects {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .cardProjectHorizontal {
+        flex-direction: column;
+    }
+
+    .cardProjectHorizontal .imageWrapper,
+    .cardProjectHorizontal .cardProjectDescription {
+        max-width: 100%;
+    }
+
+    .cardProjectHorizontal .cardProjectDescription {
+        text-align: center;
+    }
+
+    .articleContactMe,
+    .articleQuestions {
+        padding: 1rem;
+    }
+
+    .articleQuestions .question {
+        font-size: 1rem;
+    }
+
+    .centerCV a {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
     }
 
     .footerGlobal nav.container {
