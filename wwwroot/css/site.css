@@ -76,11 +76,6 @@ a:hover {
     color: var(--primary);
 }
 
-.navbar-toggler {
-    border: none; 
-    background-color: transparent;
-}
-
 .navbar-toggler-icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -931,8 +926,17 @@ section.technoSection {
         display: none !important;
     }
 
+
     .navbar-toggler {
         display: block;
+    }
+
+    .articleRetraining .course {
+        grid-template-columns: 1fr;
+    }
+
+    .articleMyTechnicalSkills .technicalSkills {
+        flex-direction: column;
     }
 
     .listAllProjects {
@@ -998,6 +1002,7 @@ section.technoSection {
         width: 100%;
         height: 100%;
     }
+
     .articleContactMe {
         align-items: center;
     }
@@ -1064,10 +1069,6 @@ section.technoSection {
         text-align: center;
     }
 
-    .articleRetraining .course {
-        grid-template-columns: 1fr;
-    }
-
     .courseContent {
         padding: 1.5rem;
     }
@@ -1075,10 +1076,6 @@ section.technoSection {
     .transferableSkillsUl {
         flex-direction: column;
         padding: 0;
-    }
-
-    .articleMyTechnicalSkills .technicalSkills {
-        flex-direction: column;
     }
 
     .technicalSkills .technicalSkillsContent {
