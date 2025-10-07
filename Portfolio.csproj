@@ -11,4 +11,10 @@
     <Folder Include="wwwroot\docs\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\docs\CVStevenRiviere.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
