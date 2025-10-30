@@ -1,7 +1,7 @@
 # Portfolio
 
 ## Description
-Ce projet est un portfolio personnel déployé sur **Azure**.  
+Ce projet est un portfolio personnel déployé sur **Azure** puis sur **Render**.  
 Il présente une sélection de projets que j’ai réalisés avec différentes technologies.  
 Le site propose une navigation fluide et interactive, avec des liens permettant de consulter mon profil **LinkedIn**, mon **GitHub** ou encore de m’envoyer directement un **mail**.
 
