@@ -10,6 +10,8 @@ Le site propose une navigation fluide et interactive, avec des liens permettant 
 - Design responsive et accessible (mobile, tablette, desktop).
 - Respect des bonnes pratiques vérifiées avec **Lighthouse**.
 
+Voici le lien du projet déployé : https://portfolio-71lb.onrender.com/Home/Index 
+
 - ## 🛠️ Technologies utilisées
 <p align="left">
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#" />
