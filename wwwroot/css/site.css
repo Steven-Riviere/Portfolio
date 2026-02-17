@@ -147,7 +147,8 @@ button:hover {
     margin: 0 1rem;
 }
 
-section.technoSection::before, section.technoSection::after,
+section.technoSection::before,
+section.toolsSection::after,
 article.articleRetraining::before, article.articleRetraining::after,
 section.myDiplomas::before, section.myDiplomas::after {
     content: "";
@@ -340,7 +341,7 @@ section.technoSection {
     text-align: center;
 }
 
-.prefTechno {
+.prefTechno, .toolsArticle {
     text-align: center;
     padding: .5rem;
     display: flex;
@@ -348,14 +349,14 @@ section.technoSection {
     gap: 3rem;
 }
 
-.iconsTech {
+.iconsTech, .iconsTools {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
     grid-gap: 1.5rem;
     justify-items: center;
 }
 
-.iconsTech .iconsPrefTech {
+.iconsTech .iconsPrefTech, .iconsTools .iconsTool {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,12 +370,12 @@ section.technoSection {
     width: 130px;
 }
 
-.iconsPrefTech .icon {
+.iconsPrefTech .icon, .iconsTool .icon {
     width: var(--tech-size);
     height: var(--tech-size);
 }
 
-.prefTechno button {
+.toolsArticle button {
     align-self: center;
 }
 
@@ -397,11 +398,8 @@ section.technoSection {
 
 .articleProjects .listRecentProjects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    grid-template-rows: 1fr;
-    grid-column-gap: 2rem;
-    grid-row-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* espace entre les projets */
 }
 
 .cardProject {
@@ -988,7 +986,7 @@ section.technoSection {
         width: 350px;
     }
 
-    .iconsTech {
+    .iconsTech, .iconsTools {
         grid-template-columns: repeat(3,1fr);
     }
 
