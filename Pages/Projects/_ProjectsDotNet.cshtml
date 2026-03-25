@@ -1,6 +1,46 @@
 ﻿<article class="cardProject cardProjectHorizontal">
     <div class="imageWrapper">
-        <img src="~/images/pretimmosimulator.webp" alt="Capture d'écran du projet PretImmo Simulator" class="cardImage" />
+        <video id="demoVideo" controls>
+            <source src="~/videos/Medicalib-demo.mp4" type="video/mp4">
+        </video>
+        <div class="cardIcons">
+            <a href="https://github.com/Steven-Riviere/HealthRiskEngine" target="_blank" rel="noopener noreferrer">
+                <img src="~/images/github-black.svg" alt="healthrisk-github" class="icon" />
+            </a>
+        </div>
+    </div>
+    <div class="cardProjectDescription">
+        <h3>Médicalib</h3>
+        <p>
+            Application basée sur une architecture microservices pour gérer les patients et analyser leurs risques médicaux. <br />
+            Plusieurs APIs (patients, notes, analyse de risques) sont orchestrées via une API Gateway (Ocelot) et conteneurisées avec Docker.
+        </p>
+        <p>
+            Principal défi : intégrer un service d’analyse du cancer en complément du diabète. <br />
+            Certaines fonctionnalités ont initialement régressé au niveau du frontend et des appels API.
+        </p>
+        <p>
+            Approche adoptée : tests directs, vérification des routes exposées et analyse des échanges HTTP. <br />
+            Solution : correction des routes, harmonisation des appels API et adaptation du frontend pour gérer plusieurs analyses.
+        </p>
+        <p>
+            Ce projet m’a permis de renforcer mes compétences en architectures distribuées et communication entre services, avec une attention particulière aux régressions et tests futurs.
+        </p>
+
+        <ul class="tags" aria-label="technologies utilisées">
+            <li class="tag">ASP.NET Core MVC (Razor)</li>
+            <li class="tag">C#</li>
+            <li class="tag">Visual Studio</li>
+			<li class="tag">Docker</li>
+        </ul>
+    </div>
+</article>
+
+<article class="cardProject cardProjectHorizontal">
+    <div class="imageWrapper">
+        <video id="demoVideo" controls>
+            <source src="~/videos/PretImmo-demo.mp4" type="video/mp4">
+        </video>
         <div class="cardIcons">
             <a href="https://github.com/Steven-Riviere/AmortizationCalculator" target="_blank" rel="noopener noreferrer">
                 <img src="~/images/github-black.svg" alt="amortization-github" class="icon" />
@@ -13,13 +53,20 @@
     <div class="cardProjectDescription">
         <h3>Prêt Immobilier</h3>
         <p>
-            Le projet "Prêt Immo Simulator" permet de simuler un prêt immobilier avec ou sans assurance.
-            L’utilisateur renseigne les paramètres du prêt : date de début, différé, taux, durée, etc.
-            Le calcul génère un récapitulatif complet par année, avec le détail mensuel des paiements, intérêts, assurance et capital remboursé.
-            Chaque année peut être consultée dans une modale dédiée pour plus de lisibilité.
-            Il est également possible de télécharger le résultat en PDF grâce à QuestPDF.
-            Le projet est déployé et fonctionnel en ligne.
+            Simulation de prêt immobilier prenant en compte durée, taux, assurance et différé de remboursement.<br />
+            Le calcul génère un tableau d’amortissement détaillé et un export PDF des résultats.
         </p>
+        <p>
+            Principal défi : gérer correctement le différé de remboursement avec assurance active.<br />
+            Les intérêts et l’assurance continuent à courir alors que le capital ne diminue pas.
+        </p>
+        <p>
+            Solution : décomposer le calcul en deux phases (différé puis remboursement classique) et ajuster les calculs mois par mois.<br />
+        </p>
+		<p>
+            Cette approche a permis une logique fiable et évolutive, tout en approfondissant la compréhension des mécanismes financiers.
+        </p>
+
         <ul class="tags" aria-label="technologies utilisées">
             <li class="tag">QuestPDF</li>
             <li class="tag">ASP.NET Core MVC (Razor)</li>
@@ -45,14 +92,21 @@
     <div class="cardProjectDescription">
         <h3>Eco-Mod BAL</h3>
         <p>
-            Ce projet a été développé avec une équipe de volontaires passionnés, composée de développeurs et de contributeurs de la communauté,
-            dans le but de créer un mod de boîtes aux lettres pour le jeu vidéo ECO.
-            Le mod propose 4 types de boîtes aux lettres différentes, adaptées au niveau des joueurs et aux matériaux disponibles,
-            offrant ainsi plus de variété et une expérience de jeu enrichie.
-            Le mod a été publié sur
-            <a href="https://mod.io/g/eco?_sort=name" target="_blank" rel="noopener noreferrer">mod.io</a>,
-            permettant à la communauté de découvrir et d’utiliser ces ajouts dans leurs parties.
+            Mod pour le jeu ECO, ajoutant plusieurs types de boîtes aux lettres adaptées aux différents niveaux de progression et ressources.
         </p>
+        <p>
+            Publié sur
+            <a href="https://mod.io/g/eco?_sort=name" target="_blank" rel="noopener noreferrer">mod.io</a>,
+            permettant à la communauté de les utiliser.
+        </p>
+        <p>
+            Défi : certains éléments visuels ne s’affichaient pas correctement en jeu.
+            Solution : collaboration avec l’équipe pour tester et valider les corrections.
+        </p>
+        <p>
+            Ce projet m’a permis de travailler en équipe, de comprendre les contraintes du modding et d’expérimenter un workflow collaboratif.
+        </p>
+
         <ul class="tags" aria-label="technologies utilisées">
             <li class="tag">Eco Modding</li>
             <li class="tag">Unity</li>

@@ -380,7 +380,7 @@ section.technoSection {
 }
 
 /* ============================= */
-/*          Projects             */
+/*          Projects  Recap      */
 /* ============================= */
 
 .recentProjects {
@@ -734,6 +734,21 @@ section.technoSection {
     border-radius: 12px;
     overflow: hidden;
     aspect-ratio: 16/9;
+}
+
+.imageWrapper video {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    object-fit: contain;
+    object-position: left top;
+    filter: brightness(0.7);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.imageWrapper:hover video {
+    transform: scale(1.05);
+    filter: brightness(0.9);
 }
 
 .cardProjectHorizontal .imageWrapper img {
