@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\docs\" />
-    <Folder Include="wwwroot\gif\" />
   </ItemGroup>
 
   <ItemGroup>

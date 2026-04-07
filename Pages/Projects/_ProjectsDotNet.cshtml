@@ -16,15 +16,28 @@
             Plusieurs APIs (patients, notes, analyse de risques) sont orchestrées via une API Gateway (Ocelot) et conteneurisées avec Docker.
         </p>
         <p>
-            Principal défi : intégrer un service d’analyse du cancer en complément du diabète. <br />
-            Certaines fonctionnalités ont initialement régressé au niveau du frontend et des appels API.
+            <strong>Principaux défis :</strong> <br />
+            - Intégrer un service d’analyse du cancer en complément du diabète, ce qui a entraîné des régressions côté frontend et API. <br />
+            - Mettre en place une pipeline CI avec GitHub Actions pour exécuter automatiquement les tests, avec des échecs liés aux tests d’intégration utilisant MongoDB.
         </p>
+
         <p>
-            Approche adoptée : tests directs, vérification des routes exposées et analyse des échanges HTTP. <br />
-            Solution : correction des routes, harmonisation des appels API et adaptation du frontend pour gérer plusieurs analyses.
+            <strong>Approches adoptées :</strong> <br />
+            - Tests directs des endpoints, vérification des routes exposées et analyse des échanges HTTP pour identifier les régressions. <br />
+            - Analyse des logs de pipeline et comparaison du comportement local vs CI pour diagnostiquer les erreurs de connexion à MongoDB.
         </p>
+
         <p>
-            Ce projet m’a permis de renforcer mes compétences en architectures distribuées et communication entre services, avec une attention particulière aux régressions et tests futurs.
+            <strong>Solutions :</strong> <br />
+            - Correction des routes, harmonisation des appels API et adaptation du frontend pour gérer plusieurs analyses. <br />
+            - Mise en place d’une configuration robuste pour la CI :
+            <br />&nbsp;&nbsp;• utilisation de variables d’environnement pour la connexion MongoDB
+            <br />&nbsp;&nbsp;• correction du host (localhost vs service Docker)
+            <br />&nbsp;&nbsp;• ajout d’une étape d’attente pour garantir la disponibilité de MongoDB avant les tests
+        </p>
+
+        <p>
+            Ce projet m’a permis de renforcer mes compétences en architectures distribuées, en communication entre services et en mise en place de pipelines CI/CD fiables, avec une attention particulière aux tests d’intégration.
         </p>
 
         <ul class="tags" aria-label="technologies utilisées">
@@ -57,11 +70,14 @@
             Le calcul génère un tableau d’amortissement détaillé et un export PDF des résultats.
         </p>
         <p>
-            Principal défi : gérer correctement le différé de remboursement avec assurance active.<br />
-            Les intérêts et l’assurance continuent à courir alors que le capital ne diminue pas.
+            <strong>Principaux défis :</strong> <br /> 
+            - Gérer correctement le différé de remboursement avec assurance active.<br />
+            - Répercussion du différé sur  la durée initiale du prêt.
         </p>
         <p>
-            Solution : décomposer le calcul en deux phases (différé puis remboursement classique) et ajuster les calculs mois par mois.<br />
+            <strong>Solutions adoptées :</strong><br />
+            - Décomposition du calcul en deux phases : différé puis remboursement classique<br />
+            - Ajustement des calculs mois par mois pour refléter la réalité financière
         </p>
 		<p>
             Cette approche a permis une logique fiable et évolutive, tout en approfondissant la compréhension des mécanismes financiers.
@@ -100,8 +116,13 @@
             permettant à la communauté de les utiliser.
         </p>
         <p>
-            Défi : certains éléments visuels ne s’affichaient pas correctement en jeu.
-            Solution : collaboration avec l’équipe pour tester et valider les corrections.
+            <strong>Principal défi :</strong><br />
+            Certains éléments visuels ne s’affichaient pas correctement en jeu.
+        </p>
+		<p>
+            <strong>Solution :</strong><br />
+            - Collaboration avec l’équipe pour identifier les problèmes<br />
+            - Tests en conditions réelles et validation des corrections
         </p>
         <p>
             Ce projet m’a permis de travailler en équipe, de comprendre les contraintes du modding et d’expérimenter un workflow collaboratif.
