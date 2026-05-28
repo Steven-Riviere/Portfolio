@@ -507,9 +507,6 @@ section.technoSection {
     flex-direction: column;
 }
 
-/*.myProfileContent, .retrainingContent, .myTechnicalSkillsContent {
-    width: calc(100% - 2rem);
-}*/
 .articleMyProfile {
     display: flex;
     align-items: center;
@@ -722,7 +719,7 @@ section.technoSection {
 }
 
 .cardProjectHorizontal {
-    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
 }
@@ -733,7 +730,6 @@ section.technoSection {
     max-width: 50%;
     border-radius: 12px;
     overflow: hidden;
-    aspect-ratio: 16/9;
 }
 
 .imageWrapper video {
@@ -747,7 +743,6 @@ section.technoSection {
 }
 
 .imageWrapper:hover video {
-    transform: scale(1.05);
     filter: brightness(0.9);
 }
 
@@ -760,6 +755,11 @@ section.technoSection {
     flex: 1;
     margin: 20px 25px;
     text-align: left;
+}
+
+.cardProjectHorizontal .imageWrapper,
+.cardProjectHorizontal .cardProjectDescription {
+    max-width: 100%;
 }
 
 .articleInterestedInMyProfile {
@@ -955,15 +955,6 @@ section.technoSection {
     .listAllProjects {
         flex-direction: column;
         gap: 2rem;
-    }
-
-    .cardProjectHorizontal {
-        flex-direction: column;
-    }
-
-    .cardProjectHorizontal .imageWrapper,
-    .cardProjectHorizontal .cardProjectDescription {
-        max-width: 100%;
     }
 
     .cardProjectHorizontal .cardProjectDescription {
